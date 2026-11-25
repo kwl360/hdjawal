@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>نقطة شحن أبو عنزة</title>
+<style>
+:root{--g:#2e9e5b;--gd:#1f7a43;--o:#f2761b;--bg:#f6f4ef;--t:#1d2b24;--m:#6b7770;--r:#d64545;--w:#fff}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--t);font-family:"Noto Naskh Arabic","Droid Arabic Naskh","Traditional Arabic",system-ui,sans-serif;font-size:16px;padding-bottom:90px}
+button,input,select,textarea{font-family:inherit;font-size:inherit}
+header{background:var(--w);padding:10px 14px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:5;box-shadow:0 2px 8px #0001}
+.brand{display:flex;align-items:center;gap:8px;font-size:19px}
+.logo{background:linear-gradient(135deg,var(--o),var(--g));color:#fff;border-radius:10px;width:34px;height:34px;display:grid;place-items:center}
+.bell{position:relative;background:none;border:0;font-size:23px;cursor:pointer;margin-inline-start:4px}
+.bell i{position:absolute;top:-4px;left:-4px;background:var(--r);color:#fff;border-radius:10px;font-size:12px;font-style:normal;min-width:18px;padding:0 4px}
+.off{background:#3b3b3b;color:#fff;font-size:13px;padding:6px 12px;text-align:center}
+.demo{margin:8px 14px 0;font-size:13px;color:var(--m);background:#fff7e8;border-radius:10px;padding:6px 10px}
+main{padding:12px 14px}
+h3{margin:18px 0 8px;font-size:18px;display:flex;align-items:center;gap:8px}
+.cnt{background:var(--o);color:#fff;border-radius:10px;padding:0 8px;font-size:14px}
+.hero{background:linear-gradient(120deg,#fbd9bd,#d7efdc);border-radius:18px;padding:14px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.hero h2{margin:2px 0 0;font-size:22px}.hero small{color:var(--m)}
+.badge{background:var(--g);color:#fff;border-radius:14px;padding:10px 12px;font-weight:bold;text-align:center}
+.tiles{display:flex;gap:10px;margin-top:12px}
+.tile{flex:1;border-radius:16px;padding:12px;color:#fff;border:3px solid transparent;cursor:pointer}
+.tile.o{background:var(--o)}.tile.g{background:var(--g)}.tile.d{background:#3d4f46}
+.tile small{display:block;opacity:.95;font-size:12.5px}.tile b{font-size:21px;display:block;margin:2px 0}
+.tile.sel{border-color:#1d2b24}
+.card,.rq,.er,.ph,.cr{background:var(--w);border-radius:14px;padding:12px;margin-bottom:8px;box-shadow:0 1px 4px #0001}
+.card small,.rq small,.er small,.ph small,.cr small{display:block;color:var(--m);font-size:13px}
+.cr{display:flex;align-items:center;justify-content:space-between;gap:8px;cursor:pointer}
+.av{width:42px;height:42px;border-radius:50%;background:var(--g);color:#fff;display:grid;place-items:center;font-weight:bold;flex:none}
+.cr .info{flex:1}
+.mini{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}
+.mini span{flex:1;border-radius:8px;padding:4px 6px;font-size:13px;text-align:center}
+.mini .c{background:#fde6d2;color:#a24d0a}.mini .s{background:#d9f0e1;color:var(--gd)}
+.mini button{flex:1;padding:6px 8px;font-size:13px}
+.rq,.ph{display:flex;justify-content:space-between;align-items:center;gap:8px}
+button.ok,button.no,button.pr,button.sc{border:0;border-radius:10px;padding:8px 12px;font-weight:bold;cursor:pointer}
+button.ok,button.pr{background:var(--g);color:#fff}button.no{background:#fde0e0;color:var(--r)}
+button.sc{background:#fde6d2;color:#a24d0a}
+.er{display:flex;justify-content:space-between;gap:8px;border-right:5px solid var(--o)}
+.er.pay{border-right-color:var(--g)}
+.er>div:first-child{flex:1}
+.chip{align-self:flex-start;display:block;font-size:12px;border-radius:8px;padding:2px 8px;text-align:center;white-space:nowrap}
+.chip.ok{background:#d9f0e1;color:var(--gd)}.chip.aw_c{background:#fff1cc;color:#8a6200}.chip.dis{background:#fde0e0;color:var(--r)}
+.warn{color:var(--r)!important}
+.acts{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}.acts button{flex:1;min-width:110px}
+.cb img{width:100%;border-radius:10px;margin:6px 0}.cb input{width:100%;padding:10px;border:1.5px solid #cfd8d2;border-radius:10px;text-align:center;direction:ltr;letter-spacing:4px;font-size:20px;margin:4px 0 8px}
+.back{background:none;border:0;color:var(--gd);font-weight:bold;padding:4px 0;font-size:17px}
+.empty{color:var(--m);text-align:center;padding:14px;font-size:14px}
+.fab{position:fixed;bottom:84px;left:16px;background:var(--o);color:#fff;border:0;border-radius:26px;padding:12px 18px;font-weight:bold;box-shadow:0 4px 12px #0004;z-index:4}
+nav{position:fixed;bottom:0;right:0;left:0;background:#fff;display:flex;box-shadow:0 -2px 10px #0002;z-index:5}
+nav button{flex:1;background:none;border:0;padding:8px 2px 10px;color:var(--m);font-size:12.5px;position:relative}
+nav button span{display:block;font-size:21px}
+nav button.on{color:var(--o);font-weight:bold}
+nav button i{position:absolute;top:2px;right:50%;margin-right:-20px;background:var(--r);color:#fff;border-radius:10px;font-size:11px;font-style:normal;padding:0 5px}
+.ov{position:fixed;inset:0;background:#0007;z-index:20;display:flex;align-items:flex-end}
+.sh{background:#fff;width:100%;border-radius:20px 20px 0 0;padding:16px;max-height:88vh;overflow:auto}
+.sh h4{margin:0 0 10px;font-size:19px}
+.sh label{display:block;margin:8px 0 4px;color:var(--m);font-size:14px}
+.sh input,.sh select,.sh textarea,.card input.srch{width:100%;padding:10px;border:1.5px solid #cfd8d2;border-radius:10px;background:#fafafa}
+.sh textarea{min-height:140px;direction:ltr;font-size:12px}
+.sh .row{display:flex;gap:8px;margin-top:14px}.sh .row button{flex:1;padding:11px}
+.nt{padding:10px;border-bottom:1px solid #eee}.nt.u{background:#fff8ec}.nt small{color:var(--m);display:block}
+.srch{width:100%;padding:10px;border:1.5px solid #cfd8d2;border-radius:12px;margin-bottom:10px}
+.toast{position:fixed;top:70px;left:50%;transform:translateX(-50%);background:#1d2b24;color:#fff;padding:8px 16px;border-radius:20px;z-index:50;font-size:14px}
+code{background:#eef3ef;padding:1px 6px;border-radius:6px;direction:ltr;display:inline-block}
+.per{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.per button{border:1.5px solid var(--g);background:#fff;color:var(--gd);border-radius:20px;padding:5px 12px}.per button.on{background:var(--g);color:#fff}
+details.card summary{cursor:pointer;font-weight:bold}
+.login{padding:24px 16px}.login h1{text-align:center;margin:10px 0 18px}.login .card input{margin-bottom:8px;text-align:center}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+var KEY='abuanza_v3',ACC={charge:'شحن',shop:'مشتريات'};
+var S,U={tab:'home',ctab:'home',cid:null,acct:'charge',sheet:null,panel:false,per:'carry'};
+var uid=function(){return Math.random().toString(36).slice(2,9)};
+var $=function(i){return document.getElementById(i)};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+var fmt=function(n){return Number(n||0).toLocaleString('en-US')+' ₪'};
+var digits=function(s){return String(s).replace(/[٠-٩]/g,function(d){return '٠١٢٣٤٥٦٧٨٩'.indexOf(d)}).replace(/\D/g,'')};
+var num=function(s){var n=parseFloat(String(s).replace(/[٠-٩]/g,function(d){return '٠١٢٣٤٥٦٧٨٩'.indexOf(d)}).replace('٫','.').replace(',','.'));return isNaN(n)?null:n};
+var ago=function(t){var m=Math.max(0,Math.round((Date.now()-t)/60000));if(m<1)return'الآن';if(m<60)return'منذ '+m+' دقيقة';var h=Math.round(m/60);if(h<24)return'منذ '+h+' ساعة';return'منذ '+Math.round(h/24)+' يوم'};
+var DOW=function(t){try{return new Date(t).toLocaleDateString('ar-u-nu-latn',{weekday:'long'})}catch(e){return''}};
+var DT=function(t){var d=new Date(t),p=function(x){return(x<10?'0':'')+x};return d.getFullYear()+'/'+(d.getMonth()+1)+'/'+d.getDate()+' · '+DOW(t)+' '+p(d.getHours())+':'+p(d.getMinutes())};
+var cust=function(id){return S.custs.find(function(c){return c.id===id})};
+var cname=function(id){var c=cust(id);return c?c.name:'—'};
+var role=function(){return S.sess?S.sess.role:null};
+var me=function(){return S.sess?S.sess.cid:null};
+var isO=function(){return role()==='owner'};
+var vk=function(){return isO()?'owner':me()};
+
+function demoImg(){var t='<svg xmlns="http://www.w3.org/2000/svg" width="600" height="260"><rect width="600" height="260" rx="18" fill="#eef4fb"/><text x="300" y="70" font-size="44" text-anchor="middle" fill="#2a4fb5" font-family="Arial" font-weight="bold">B.net connect</text><text x="300" y="150" font-size="46" text-anchor="middle" fill="#2a4fb5" font-family="Arial" font-weight="bold">9707 3898 1234</text><text x="300" y="215" font-size="30" text-anchor="middle" fill="#777" font-family="Arial">(صورة تجريبية)</text></svg>';return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(t)}
+function seed(){
+  var n=Date.now(),H=3600000,D=24*H;
+  var O=function(cid,acct,kind,desc,s,c,ago){return{id:uid(),cid:cid,acct:acct,kind:kind,desc:desc,s:s,c:c,ts:n-ago,cyc:null}};
+  var k=O('c2','shop','buy','بطاقة B.net — 1 شيكل',1,null,180000);k.cardId='k1';
+  return{shop:'نقطة شحن أبو عنزة',pin:'1234',
+   custs:[{id:'c1',name:'أحمد السالم',phone:'0501234567',pin:'1111',devs:[{id:'d1',name:'iPhone 13'}]},
+          {id:'c2',name:'فاطمة العنزي',phone:'0559876543',pin:'2222',devs:[{id:'d2',name:'Samsung A54'}]},
+          {id:'c3',name:'خالد العتيبي',phone:'0545551122',pin:'3333',devs:[{id:'d3',name:'Xiaomi Redmi'}]}],
+   ops:[O('c1','charge','buy','شحن جوال',120,120,3*D),O('c1','charge','pay','',50,50,D),O('c1','shop','buy','كيبل شحن',25,null,2*H),
+        O('c2','shop','buy','سماعات',110,110,2*D),O('c2','charge','buy','شحن جوال',45,40,5*H),
+        O('c3','charge','buy','شحن باور بانك',null,30,3*H),O('c3','charge','pay','',null,20,H),k],
+   phones:[{id:uid(),cid:'c1',dev:'iPhone 13',ts:n-40*60000,st:'ch'},{id:uid(),cid:'c3',dev:'Xiaomi Redmi',ts:n-90*60000,st:'ch'}],
+   cards:[{id:'k1',cid:'c2',name:'بطاقة B.net — 1 شيكل',price:1,code:'1234',img:demoImg(),st:'sent',ts:n-180000,delAt:0,tries:0,oid:k.id}],
+   notes:[],cycles:[],carry:{from:0,hist:[]},sess:null};
+}
+function load(){try{var j=localStorage.getItem(KEY);if(j){var o=JSON.parse(j);o.cards=o.cards||[];o.cycles=o.cycles||[];o.carry=o.carry||{from:0,hist:[]};return o}}catch(e){}return seed()}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function toast(t){var d=document.createElement('div');d.className='toast';d.textContent=t;document.body.appendChild(d);setTimeout(function(){d.remove()},2400)}
+function note(to,text){S.notes.unshift({id:uid(),to:to,text:text,ts:Date.now(),read:false})}
+
+/* ---------- منطق الدفتر ---------- */
+var op=function(id){return S.ops.find(function(o){return o.id===id})};
+var opTitle=function(o){return o.kind==='pay'?'دفعة نقدية':o.desc};
+function st(o){ // ok | dis | ws (ينتظر البائع) | wc (ينتظر الزبون)
+  if(o.s==null)return'ws';
+  if(o.kind==='pay')return(o.c==null||o.c===o.s)?'ok':'dis';
+  if(o.c==null)return'wc';
+  return o.s===o.c?'ok':'dis';
+}
+function act(cid,acct){return S.ops.filter(function(o){return o.cid===cid&&!o.cyc})}
+function tot(cid,acct,side){
+  return act(cid,acct).reduce(function(t,o){
+    var v=side==='s'?o.s:((o.kind==='pay'&&o.c==null)?o.s:o.c);
+    if(v==null)return t;return t+(o.kind==='buy'?v:-v);
+  },0);
+}
+function sumS(){return S.custs.reduce(function(t,c){return t+tot(c.id,'','s')},0)}
+function needS(){return S.ops.filter(function(o){return!o.cyc&&(st(o)==='ws'||st(o)==='dis')}).sort(function(a,b){return b.ts-a.ts})}
+function needC(cid){return S.ops.filter(function(o){return o.cid===cid&&!o.cyc&&(st(o)==='wc'||st(o)==='dis')})}
+function waitC(){return S.ops.filter(function(o){return!o.cyc&&st(o)==='wc'})}
+function tryClose(cid,acct){
+  var L=act(cid,acct);
+  if(!L.length||L.some(function(o){return st(o)!=='ok'}))return;
+  if(tot(cid,acct,'s')!==0||tot(cid,acct,'c')!==0)return;
+  if(!L.some(function(o){return o.kind==='pay'}))return;
+  var cy=uid();S.cycles.push({id:cy,cid:cid,acct:acct,ts:Date.now()});
+  L.forEach(function(o){o.cyc=cy});
+  note(cid,'✓ أُغلق الحساب وصُفّر العداد، وحُفظت الدفعات في الأرشيف');
+  note('owner','✓ '+cname(cid)+': أُغلق الحساب (تصفير)');
+}
+function noteOther(o,txt){if(isO())note(o.cid,'البائع '+txt);else note('owner',cname(o.cid)+' '+txt)}
+function createRec(side,cid,acct,kind,desc,m){
+  var other=side==='s'?'c':'s',now=Date.now();
+  var o=S.ops.find(function(x){return x.cid===cid&&x.kind===kind&&!x.cyc&&x[side]==null&&x[other]===m&&Math.abs(now-x.ts)<36*3600000});
+  if(o){o[side]=m;if(!o.desc&&desc)o.desc=desc;toast('طابق تسجيل الطرف الآخر ✓')}
+  else{o={id:uid(),cid:cid,acct:acct,kind:kind,desc:desc,s:null,c:null,ts:now,cyc:null};o[side]=m;S.ops.push(o);toast('تم التسجيل — بانتظار الطرف الآخر')}
+  note(side==='s'?cid:'owner',(side==='s'?'البائع سجّل ':cname(cid)+' سجّل ')+opTitle(o)+' '+fmt(m)+(kind==='buy'?' ('+ACC[acct]+')':'')+' — راجعه وأكّد');
+  tryClose(cid,acct);return o;
+}
+function adopt(id){var o=op(id);if(isO())o.s=o.c;else o.c=o.s;noteOther(o,'أكّد '+opTitle(o)+' '+fmt(isO()?o.s:o.c));tryClose(o.cid,o.acct);save();render();toast('تم التأكيد')}
+function editMine(id){
+  var o=op(id),sw=isO();
+  openSheet((sw?o.s:o.c)==null?'تسجيل مبلغي':'تعديل مبلغي',[{id:'m',label:opTitle(o)+' (₪)',type:'num',value:(sw?o.s:o.c)==null?'':String(sw?o.s:o.c)}],'حفظ',function(v){
+    var m=num(v.m);if(!(m>0)){toast('أدخل مبلغاً صحيحاً');return false}
+    o[sw?'s':'c']=m;noteOther(o,'سجّل/عدّل مبلغه في '+opTitle(o)+' إلى '+fmt(m));tryClose(o.cid,o.acct);
+  });
+}
+function delMine(id){
+  var o=op(id),sw=isO(),k=sw?'s':'c',oth=sw?'c':'s';
+  if(o[oth]==null)S.ops=S.ops.filter(function(x){return x.id!==id});else o[k]=null;
+  save();render();toast('حُذف تسجيلي');
+}
+function cands(o){
+  var sOnly=o.s!=null&&o.c==null;
+  return S.ops.filter(function(x){return x.id!==o.id&&x.cid===o.cid&&x.kind===o.kind&&!x.cyc&&(sOnly?(x.c!=null&&x.s==null):(x.s!=null&&x.c==null))});
+}
+function linkOp(id){
+  var o=op(id),L=cands(o),sOnly=o.s!=null&&o.c==null;
+  openSheet('ربط بتسجيل الطرف الآخر',[{id:'t',label:'هذه العملية هي نفسها:',type:'select',opts:L.map(function(x){return[x.id,opTitle(x)+' — '+fmt(sOnly?x.c:x.s)+' — '+DT(x.ts)]})}],'ربط',function(v){
+    var x=op(v.t);if(!x)return false;
+    if(sOnly)o.c=x.c;else o.s=x.s;
+    S.ops=S.ops.filter(function(y){return y.id!==x.id});
+    noteOther(o,'ربط تسجيلين لـ '+opTitle(o));tryClose(o.cid,o.acct);toast('تم الربط');
+  });
+}
+function quickOp(kind){
+  openSheet('اختر الزبون',[{id:'c',label:'الزبون',type:'select',opts:S.custs.map(function(c){return[c.id,c.name]})}],'التالي',function(v){U.sheet=null;setTimeout(function(){newOp(kind,v.c)},0);return false});
+}
+function newOp(kind,cc){
+  var sw=isO(),cid=sw?(cc||U.cid):me();
+  var f=[];
+  if(kind==='buy')f.push({id:'a',label:'النوع',type:'select',opts:acctOpts(),value:U.acct},{id:'d',label:sw?'البيان (شحن / كيبل / ...)':'ماذا أخذت؟'});
+  f.push({id:'m',label:'المبلغ (₪)',type:'num'});
+  openSheet(kind==='buy'?(sw?'تسجيل بيع':'تسجيل ما أخذته'):(sw?'استلمت نقداً':'دفعت نقداً'),f,'تسجيل',function(v){
+    var m=num(v.m);if(!(m>0)||(kind==='buy'&&!v.d)){toast('أكمل البيانات');return false}
+    var ac=v.a||U.acct;U.acct=ac;createRec(sw?'s':'c',cid,ac,kind,v.d||'',m);
+  });
+}
+
+/* ---------- نماذج ---------- */
+function openSheet(title,fields,ok,fn){U.sheet={title:title,fields:fields,ok:ok,fn:fn};render()}
+function closeSheet(){U.sheet=null;render()}
+function submitSheet(){
+  var v={};U.sheet.fields.forEach(function(f){v[f.id]=$('f_'+f.id).value.trim()});
+  var r=U.sheet.fn(v);if(r===false)return;U.sheet=null;save();render();
+}
+function sheetHTML(){
+  var s=U.sheet;
+  var f=s.fields.map(function(x){
+    var inp;
+    if(x.type==='select')inp='<select id="f_'+x.id+'">'+x.opts.map(function(o){return'<option value="'+esc(o[0])+'"'+(o[0]===x.value?' selected':'')+'>'+esc(o[1])+'</option>'}).join('')+'</select>';
+    else if(x.type==='file')inp='<input type="file" id="f_'+x.id+'" accept="image/*" capture="environment" onchange="pickImg(this)"><img id="imgprev" style="display:none;width:100%;border-radius:10px;margin-top:6px">';
+    else if(x.type==='area')inp='<textarea id="f_'+x.id+'">'+esc(x.value||'')+'</textarea>';
+    else inp='<input id="f_'+x.id+'" value="'+esc(x.value||'')+'"'+(x.type==='num'?' inputmode="decimal"':'')+(x.type==='tel'?' inputmode="tel"':'')+' placeholder="'+esc(x.ph||'')+'">';
+    return'<label>'+esc(x.label)+'</label>'+inp;
+  }).join('');
+  return'<div class="ov" onclick="if(event.target===this)closeSheet()"><div class="sh"><h4>'+esc(s.title)+'</h4>'+f+'<div class="row"><button class="pr ok" onclick="submitSheet()">'+esc(s.ok)+'</button><button class="no" onclick="closeSheet()">إلغاء</button></div></div></div>';
+}
+var acctOpts=function(){return[['charge',ACC.charge],['shop',ACC.shop]]};
+
+/* ---------- الدخول ---------- */
+function loginOwner(){if($('opin').value.trim()!==S.pin){toast('الرمز غير صحيح');return}S.sess={role:'owner'};U.tab='home';U.cid=null;save();render()}
+function loginCust(){
+  var p=digits($('lph').value),c=S.custs.find(function(x){return digits(x.phone)===p&&x.pin===$('lpin').value.trim()});
+  if(!p||!c){toast('الجوال أو الرمز غير صحيح');return}
+  S.sess={role:'cust',cid:c.id};U.ctab='home';U.acct='charge';save();render();
+}
+function logout(){S.sess=null;U.cid=null;U.panel=false;U.sheet=null;save();render()}
+function loginView(){
+  return'<div class="login"><h1>⚡ '+esc(S.shop)+'</h1>'+
+  '<div class="card"><b>صاحب النقطة</b><input id="opin" class="srch" type="password" inputmode="numeric" placeholder="الرمز السري"><button class="pr ok" style="width:100%;padding:11px" onclick="loginOwner()">دخول</button></div>'+
+  '<div class="card"><b>زبون</b><input id="lph" class="srch" inputmode="tel" placeholder="رقم الجوال"><input id="lpin" class="srch" type="password" inputmode="numeric" placeholder="الرمز السري"><button class="sc" style="width:100%;padding:11px" onclick="loginCust()">دخول</button></div>'+
+  '<div class="demo">نسخة تجريبية: رمز صاحب النقطة 1234. الزبائن: 0501234567 ← 1111، 0559876543 ← 2222، 0545551122 ← 3333. الحماية الحقيقية تأتي مع الربط بالخادم.</div></div>';
+}
+
+/* ---------- إجراءات صاحب النقطة ---------- */
+function addCust(){
+  openSheet('زبون جديد',[{id:'n',label:'الاسم'},{id:'p',label:'رقم الجوال',type:'tel'},{id:'k',label:'رمز دخوله (4 أرقام، تسلّمه له)',type:'tel'},{id:'d',label:'نوع جواله (يُسجَّل مرة واحدة)',ph:'مثال: Samsung A54'}],'إضافة',function(v){
+    var k=digits(v.k);
+    if(!v.n||digits(v.p).length<9||k.length!==4){toast('أكمل الاسم والجوال ورمزاً من 4 أرقام');return false}
+    if(S.custs.some(function(c){return digits(c.phone)===digits(v.p)})){toast('هذا الجوال مسجّل');return false}
+    S.custs.push({id:uid(),name:v.n,phone:v.p,pin:k,devs:v.d?[{id:uid(),name:v.d}]:[]});toast('تمت الإضافة');
+  });
+}
+function addDev(){
+  openSheet('جهاز جديد لـ '+cname(U.cid),[{id:'d',label:'نوع الجوال'}],'حفظ',function(v){
+    if(!v.d){toast('اكتب النوع');return false}cust(U.cid).devs.push({id:uid(),name:v.d});
+  });
+}
+function startCharge(cid,name){S.phones.push({id:uid(),cid:cid,dev:name,ts:Date.now(),st:'ch'});note(cid,'بدأ شحن جوالك '+name);save();render();toast('بدأ الشحن')}
+function chargeDev(cid,did){var d=cust(cid).devs.find(function(x){return x.id===did});startCharge(cid,d.name)}
+function addPhone(){
+  if(!S.custs.length){toast('أضف زبوناً أولاً');return}
+  openSheet('جوال للشحن',[{id:'c',label:'الزبون',type:'select',opts:S.custs.map(function(c){return[c.id,c.name]})}],'التالي',function(v){
+    var c=cust(v.c);U.sheet=null;
+    if(c.devs.length===1){startCharge(c.id,c.devs[0].name);return false}
+    var o=c.devs.map(function(d){return[d.id,d.name]});o.push(['new','جهاز جديد']);
+    setTimeout(function(){openSheet('أي جهاز؟ — '+c.name,[{id:'d',label:'الجهاز',type:'select',opts:o},{id:'n',label:'إن كان جديداً: نوعه'}],'بدء الشحن',function(w){
+      if(w.d==='new'){if(!w.n){toast('اكتب نوع الجهاز');return false}c.devs.push({id:uid(),name:w.n});startCharge(c.id,w.n)}
+      else chargeDev(c.id,w.d);
+    })},0);
+    return false;
+  });
+}
+function finishPhone(id){var p=S.phones.find(function(x){return x.id===id});p.st='done';note(p.cid,'جوالك '+p.dev+' جاهز للاستلام');save();render()}
+function deliverPhone(id){
+  var p=S.phones.find(function(x){return x.id===id});
+  openSheet('تسليم '+p.dev+' — '+cname(p.cid),[{id:'f',label:'أجرة الشحن (₪) — اتركها فارغة إن لم تُسجَّل',type:'num'}],'تسليم',function(v){
+    var f=num(v.f);S.phones=S.phones.filter(function(x){return x.id!==id});
+    if(f>0)createRec('s',p.cid,'charge','buy','شحن '+p.dev,f);else toast('تم التسليم');
+  });
+}
+function sendWA(){
+  var c=cust(U.cid),L=['كشف حساب — '+S.shop,'الزبون: '+c.name,''];
+  L.push('المجموع المستحق (شحن ومشتريات): '+fmt(tot(c.id,'','s')));
+  var p=digits(c.phone).replace(/^0/,'970');
+  window.open('https://wa.me/'+p+'?text='+encodeURIComponent(L.join('\n')),'_blank');
+}
+function saveShop(){S.shop=$('shopname').value.trim()||S.shop;save();render();toast('تم الحفظ')}
+function savePin(){var p=digits($('newpin').value);if(p.length<4){toast('4 أرقام على الأقل');return}S.pin=p;save();toast('تم تغيير الرمز')}
+function resetDemo(){if(confirm('سيتم حذف كل البيانات والعودة للبيانات التجريبية. متأكد؟')){S=seed();U.cid=null;save();render()}}
+function backup(){
+  openSheet('نسخة احتياطية',[{id:'j',label:'انسخ النص للحفظ، أو الصق نسخة سابقة ثم اضغط استيراد',type:'area',value:JSON.stringify(S)}],'استيراد',function(v){
+    try{var o=JSON.parse(v.j);if(!o.custs||!o.ops)throw 0;o.sess=S.sess;S=o;toast('تم الاستيراد')}catch(e){toast('النص غير صالح');return false}
+  });
+}
+function carryOver(){
+  var from=S.carry.from,L=S.ops.filter(function(o){return o.kind==='pay'&&o.s!=null&&o.ts>=from}),T=L.reduce(function(t,o){return t+o.s},0);
+  if(!L.length){toast('لا توجد دفعات للترحيل');return}
+  if(!confirm('ترحيل '+fmt(T)+' ('+L.length+' دفعة) وتصفير عداد التحصيل؟'))return;
+  S.carry.hist.unshift({ts:Date.now(),total:T,n:L.length});S.carry.from=Date.now();save();render();toast('تم الترحيل');
+}
+
+/* ---------- البطاقات ---------- */
+var IMG=null;
+function pickImg(inp){var f=inp.files&&inp.files[0];if(!f)return;var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var k=Math.min(1,900/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);IMG=c.toDataURL('image/jpeg',0.6);var p=$('imgprev');if(p){p.src=IMG;p.style.display='block'}};im.src=r.result};r.readAsDataURL(f)}
+function sendCard(){
+  IMG=null;
+  openSheet('إرسال بطاقة — '+cname(U.cid),[{id:'i',label:'صوّر البطاقة',type:'file'},{id:'n',label:'نوع البطاقة',value:'بطاقة B.net — 1 شيكل'},{id:'p',label:'السعر (₪)',type:'num',value:'1'},{id:'k',label:'آخر 4 أرقام من رقم البطاقة (يكتبها الزبون لتأكيد الوصول)',type:'tel',ph:'مثال: 1201'}],'إرسال للزبون',function(v){
+    var p=num(v.p),k=digits(v.k);
+    if(!IMG){toast('صوّر البطاقة أولاً');return false}
+    if(!v.n||!(p>0)){toast('أدخل النوع والسعر');return false}
+    if(k.length!==4){toast('اكتب 4 أرقام بالضبط');return false}
+    var cid=uid(),o={id:uid(),cid:U.cid,acct:'shop',kind:'buy',desc:v.n,s:p,c:null,ts:Date.now(),cyc:null,cardId:cid};S.ops.push(o);
+    S.cards.push({id:cid,cid:U.cid,name:v.n,price:p,code:k,img:IMG,st:'sent',ts:Date.now(),delAt:0,tries:0,oid:o.id});
+    IMG=null;note(U.cid,'وصلتك بطاقة من النقطة. اكتب آخر 4 أرقام منها لتأكيد الوصول');toast('أُرسلت البطاقة');
+  });
+}
+function cancelCard(id){var c=S.cards.find(function(x){return x.id===id});S.ops=S.ops.filter(function(o){return o.id!==c.oid});S.cards=S.cards.filter(function(x){return x.id!==id});note(c.cid,'ألغت النقطة البطاقة '+c.name);save();render();toast('أُلغيت وحُذفت الصورة')}
+function confirmCard(id){
+  var c=S.cards.find(function(x){return x.id===id}),v=digits($('cc_'+id).value);
+  if(v!==c.code){c.tries++;if(c.tries>=3)note('owner',cname(c.cid)+' أخطأ '+c.tries+' مرات في كود تأكيد '+c.name);save();toast('الكود غير صحيح');return}
+  c.st='recv';c.delAt=Date.now()+5*60000;var o=op(c.oid);if(o)o.c=o.s;
+  note('owner',cname(c.cid)+' أكّد وصول '+c.name+' ('+fmt(c.price)+') وسُجّلت في المشتريات');save();render();toast('تم تأكيد الوصول');
+}
+function cleanup(){var ch=false;S.cards.forEach(function(c){if(c.st==='recv'&&Date.now()>c.delAt){c.img=null;c.st='gone';ch=true}});if(ch)save();return ch}
+function cardsOwner(){
+  var L=S.cards.filter(function(c){return c.st==='sent'});
+  if(!L.length)return'<div class="empty">لا توجد بطاقات بانتظار الوصول</div>';
+  return L.map(function(c){return'<div class="ph"><div><b>'+esc(c.name)+' · '+fmt(c.price)+'</b><small>'+esc(cname(c.cid))+' · أُرسلت '+ago(c.ts)+' · بانتظار الكود</small></div><button class="no" onclick="cancelCard(\''+c.id+'\')">إلغاء</button></div>'}).join('');
+}
+function cardsCust(cid){
+  var L=S.cards.filter(function(c){return c.cid===cid&&(c.st==='sent'||c.st==='recv')});
+  if(!L.length)return'<div class="empty">لا توجد بطاقات واردة</div>';
+  return L.map(function(c){
+    if(c.st==='sent')return'<div class="card cb"><b>'+esc(c.name)+' · '+fmt(c.price)+'</b><img src="'+c.img+'"><small>اكتب آخر 4 أرقام من رقم البطاقة كما تراها في الصورة لتأكيد الوصول</small><input id="cc_'+c.id+'" inputmode="numeric" maxlength="4" placeholder="••••"><button class="pr ok" style="width:100%;padding:10px" onclick="confirmCard(\''+c.id+'\')">تأكيد الوصول</button></div>';
+    var m=Math.max(1,Math.ceil((c.delAt-Date.now())/60000));
+    return'<div class="card cb"><b>'+esc(c.name)+' ✓ وصلت</b><img src="'+c.img+'"><small class="warn">ستُحذف الصورة بعد '+m+' دقيقة — انسخ بيانات البطاقة الآن</small></div>';
+  }).join('');
+}
+
+/* ---------- التنقل ---------- */
+function setTab(t){U.tab=t;U.cid=null;render()}
+function setCTab(t){U.ctab=t;render()}
+function openCust(id){U.cid=id;render()}
+function back(){U.cid=null;render()}
+function setPer(p){U.per=p;render()}
+function openNotes(){U.panel=true;render();var k=vk();S.notes.forEach(function(n){if(n.to===k)n.read=true});save()}
+function closeNotes(){U.panel=false;render()}
+function filt(q){q=q.trim();document.querySelectorAll('.cr[data-n]').forEach(function(r){r.style.display=r.getAttribute('data-n').indexOf(q)>-1?'':'none'})}
+
+/* ---------- عرض ---------- */
+function hdr(){
+  var k=vk(),n=S.notes.filter(function(x){return x.to===k&&!x.read}).length;
+  return(navigator.onLine===false?'<div class="off">📴 بدون إنترنت — التطبيق يعمل ويحفظ على جهازك، وسيُرسل عند عودة الشبكة (في النسخة الحقيقية)</div>':'')+
+  '<header><div class="brand"><span class="logo">⚡</span><b>'+esc(S.shop)+'</b></div><div><button class="bell" onclick="openNotes()">🔔'+(n?'<i>'+n+'</i>':'')+'</button><button class="bell" onclick="logout()">🚪</button></div></header>';
+}
+function nav(){
+  var b=function(on,fn,ic,lb,bd){return'<button class="'+(on?'on':'')+'" onclick="'+fn+'"><span>'+ic+'</span>'+lb+(bd?'<i>'+bd+'</i>':'')+'</button>'};
+  if(isO()){var c=needS().length;return'<nav>'+b(U.tab==='home'&&!U.cid,"setTab('home')",'🏠','الرئيسية')+b(U.tab==='custs'||U.cid,"setTab('custs')",'👥','الزبائن')+b(U.tab==='rev'&&!U.cid,"setTab('rev')",'📋','المراجعة',c||'')+b(U.tab==='col'&&!U.cid,"setTab('col')",'💰','التحصيل')+b(U.tab==='set'&&!U.cid,"setTab('set')",'⚙️','الإعدادات')+'</nav>'}
+  return'<nav>'+b(U.ctab==='home',"setCTab('home')",'🏠','الرئيسية')+b(U.ctab==='led',"setCTab('led')",'📒','دفتري')+b(U.ctab==='arc',"setCTab('arc')",'🗂️','الأرشيف')+'</nav>';
+}
+function balTxt(v,o){return v<0?(o?'رصيد للزبون ':'رصيد لك ')+fmt(-v):fmt(v)}
+function opRow(o,v,nm){
+  var sw=v==='s',s=st(o),mine=sw?o.s:o.c,oth=sw?o.c:o.s,arch=!!o.cyc;
+  var lab=s==='ok'?'متطابقة ✓':s==='dis'?'خلاف':((s==='ws')===sw?'بانتظار تأكيدك':(sw?'بانتظار الزبون':'بانتظار البائع'));
+  var cls=s==='ok'?'ok':s==='dis'?'dis':'aw_c',B='';
+  if(!arch){
+    if(oth!=null&&mine!==oth)B+='<button class="ok" onclick="adopt(\''+o.id+'\')">'+(mine==null?(o.kind==='pay'&&sw?'استلمت ':'تأكيد '):'اعتماد مبلغه ')+fmt(oth)+'</button>';
+    if(mine==null&&!o.cardId)B+='<button class="sc" onclick="editMine(\''+o.id+'\')">✍️ سجّل مبلغي</button>';
+    if(mine!=null&&!o.cardId)B+='<button class="sc" onclick="editMine(\''+o.id+'\')">تعديل مبلغي</button><button class="no" onclick="delMine(\''+o.id+'\')">حذف تسجيلي</button>';
+    if((mine==null||oth==null)&&cands(o).length)B+='<button class="sc" onclick="linkOp(\''+o.id+'\')">🔗 ربط</button>';
+  }
+  return'<div class="er '+(o.kind==='pay'?'pay':'')+'"><div><b>'+(nm?esc(cname(o.cid))+' · ':'')+esc(opTitle(o))+'</b><small>'+(o.kind==='buy'?ACC[o.acct]+' · ':'')+DT(o.ts)+'</small><small>البائع: '+(o.s!=null?fmt(o.s):'—')+' · الزبون: '+(o.c!=null?fmt(o.c):'—')+'</small>'+(B?'<div class="mini">'+B+'</div>':'')+'</div><span class="chip '+cls+'">'+lab+'</span></div>';
+}
+function opList(L,v,nm,empty){return L.length?L.map(function(o){return opRow(o,v,nm)}).join(''):'<div class="empty">'+empty+'</div>'}
+function ledger(cid,a,v){return opList(act(cid,a).sort(function(x,y){return y.ts-x.ts}),v,false,'لا توجد عمليات')}
+function archive(cid,v){
+  var L=S.cycles.filter(function(c){return c.cid===cid}).sort(function(a,b){return b.ts-a.ts});
+  if(!L.length)return'<div class="empty">لا يوجد أرشيف بعد</div>';
+  return L.map(function(c){
+    var ops=S.ops.filter(function(o){return o.cyc===c.id}),paid=ops.filter(function(o){return o.kind==='pay'}).reduce(function(t,o){return t+(o.s!=null?o.s:o.c)},0);
+    return'<details class="card"><summary>أُغلق '+DT(c.ts)+' · دُفع '+fmt(paid)+'</summary>'+ops.sort(function(a,b){return a.ts-b.ts}).map(function(o){return opRow(o,v,false)}).join('')+'</details>';
+  }).join('');
+}
+function custRow(c){
+  var flag=S.ops.some(function(o){return o.cid===c.id&&!o.cyc&&st(o)!=='ok'});
+  return'<div class="cr" data-n="'+esc(c.name+' '+c.phone)+'" onclick="openCust(\''+c.id+'\')"><div class="av">'+esc(c.name.charAt(0))+'</div><div class="info"><b>'+esc(c.name)+(flag?' <span class="warn">⚠</span>':'')+'</b><small>'+esc(c.phone)+'</small><div class="mini"><span class="c">المستحق (شحن ومشتريات) '+fmt(tot(c.id,'','s'))+'</span></div></div><span>‹</span></div>';
+}
+function phonesList(L,own){
+  if(!L.length)return'<div class="empty">لا توجد جوالات على الشحن</div>';
+  return L.map(function(p){
+    var done=p.st==='done',btn=own?(done?'<button class="ok" onclick="deliverPhone(\''+p.id+'\')">تسليم</button>':'<button class="sc" onclick="finishPhone(\''+p.id+'\')">انتهى الشحن</button>'):'';
+    return'<div class="ph"><div><b>'+esc(p.dev)+'</b><small>'+(own?esc(cname(p.cid))+' · ':'')+(done?'جاهز للاستلام ✓':'جاري الشحن · '+ago(p.ts))+'</small></div>'+btn+'</div>';
+  }).join('');
+}
+function ownerView(){
+  if(U.cid)return custDetail();
+  if(U.tab==='custs')return'<main><input class="srch" placeholder="🔍 بحث عن زبون بالاسم أو الجوال" oninput="filt(this.value)">'+S.custs.map(custRow).join('')+'<button class="pr ok" style="width:100%;padding:12px;margin-top:6px" onclick="addCust()">+ زبون جديد</button></main>';
+  if(U.tab==='rev')return'<main><h3>بانتظار تأكيدك أو فيها خلاف <span class="cnt">'+needS().length+'</span></h3>'+opList(needS(),'s',true,'لا توجد عمليات للمراجعة ✓')+'<h3>بانتظار تأكيد الزبائن</h3>'+opList(waitC(),'s',true,'لا شيء')+'</main>';
+  if(U.tab==='col')return colView();
+  if(U.tab==='set')return'<main><div class="card"><label>اسم النقطة</label><input id="shopname" class="srch" value="'+esc(S.shop)+'"><button class="pr ok" onclick="saveShop()">حفظ</button></div><div class="card"><label>تغيير رمز الدخول</label><input id="newpin" class="srch" inputmode="numeric" placeholder="رمز جديد"><button class="pr ok" onclick="savePin()">تغيير</button></div><div class="card"><button class="sc" onclick="backup()">نسخة احتياطية / استيراد</button><small style="margin-top:8px">البيانات محفوظة على هذا الجهاز في النسخة التجريبية.</small></div><div class="card"><button class="no" onclick="resetDemo()">حذف الكل والعودة للبيانات التجريبية</button></div></main>';
+  var need=needS(),col=S.ops.filter(function(o){return o.kind==='pay'&&o.s!=null&&o.ts>=S.carry.from}).reduce(function(t,o){return t+o.s},0);
+  return'<main><div class="hero"><div><small>ملخص اليوم</small><h2>مرحباً 👋</h2></div><div class="badge">'+S.phones.length+' جوالات<br>على الشحن</div></div>'+
+   '<div class="tiles"><div class="tile o"><small>المستحق لك — شحن ومشتريات</small><b>'+balTxt(sumS(),1)+'</b><small>حسب دفترك</small></div></div>'+
+   '<div class="tiles"><div class="tile d" onclick="setTab(\'col\')"><small>المحصَّل نقداً منذ آخر ترحيل</small><b>'+fmt(col)+'</b></div></div>'+
+   '<div class="acts"><button class="pr ok" onclick="quickOp(\'buy\')">+ تسجيل بيع / شحن</button><button class="sc" onclick="quickOp(\'pay\')">💵 استلمت نقداً</button></div>'+
+   '<h3>جوالات على الشحن</h3>'+phonesList(S.phones,true)+
+   '<h3>بطاقات أُرسلت بانتظار وصولها</h3>'+cardsOwner()+
+   '<h3>للمراجعة <span class="cnt">'+need.length+'</span></h3>'+opList(need.slice(0,3),'s',true,'لا توجد عمليات للمراجعة ✓')+
+   '<h3>الزبائن</h3>'+S.custs.slice(0,3).map(custRow).join('')+'</main><button class="fab" onclick="addPhone()">+ جوال للشحن</button>';
+}
+function colView(){
+  var d=new Date(),t0=new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime();
+  var from={today:t0,week:t0-6*86400000,month:new Date(d.getFullYear(),d.getMonth(),1).getTime(),carry:S.carry.from,all:0}[U.per];
+  var L=S.ops.filter(function(o){return o.kind==='pay'&&o.s!=null&&o.ts>=from}).sort(function(a,b){return b.ts-a.ts});
+  var T=L.reduce(function(t,o){return t+o.s},0);
+  var P=[['carry','منذ آخر ترحيل'],['today','اليوم'],['week','آخر 7 أيام'],['month','هذا الشهر'],['all','الكل']];
+  return'<main><h3>💰 المحصَّل نقداً</h3><div class="per">'+P.map(function(p){return'<button class="'+(U.per===p[0]?'on':'')+'" onclick="setPer(\''+p[0]+'\')">'+p[1]+'</button>'}).join('')+'</div>'+
+   '<div class="tiles"><div class="tile g"><small>المجموع</small><b>'+fmt(T)+'</b><small>'+L.length+' دفعة</small></div></div>'+
+   (U.per==='carry'?'<div class="acts"><button class="pr ok" onclick="carryOver()">ترحيل المجموع وتصفير العداد</button></div>':'')+
+   '<h3>كشف المدفوعات</h3>'+(L.length?L.map(function(o){return'<div class="er pay"><div><b>'+esc(cname(o.cid))+'</b><small>'+DT(o.ts)+'</small></div><b>'+fmt(o.s)+'</b></div>'}).join(''):'<div class="empty">لا توجد دفعات في هذه الفترة</div>')+
+   (S.carry.hist.length?'<h3>سجل الترحيلات</h3>'+S.carry.hist.slice(0,8).map(function(h){return'<div class="er"><div><b>'+fmt(h.total)+'</b><small>'+DT(h.ts)+' · '+h.n+' دفعة</small></div></div>'}).join(''):'')+'</main>';
+}
+function acctTile(c){
+  var s=tot(c,'','s'),k=tot(c,'','c'),d=s!==k;
+  return'<div class="tile o"><small>الحساب — شحن ومشتريات</small><b>'+balTxt(s,1)+'</b><small>حسب دفترك</small><small>حسب الزبون: '+balTxt(k,1)+(d?' ⚠':'')+'</small></div>';
+}
+function custDetail(){
+  var c=cust(U.cid),a=U.acct;
+  return'<main><button class="back" onclick="back()">→ الزبائن</button><div class="card"><b style="font-size:19px">'+esc(c.name)+'</b><small>'+esc(c.phone)+' · رمز دخوله: <code>'+esc(c.pin)+'</code></small>'+
+   '<h3 style="font-size:15px;margin:10px 0 4px">أجهزته</h3><div class="mini">'+(c.devs.map(function(d){return'<button class="sc" onclick="chargeDev(\''+c.id+'\',\''+d.id+'\')">⚡ شحن '+esc(d.name)+'</button>'}).join('')||'<small>لا أجهزة</small>')+'<button class="no" style="background:#eef3ef;color:var(--gd)" onclick="addDev()">+ جهاز</button></div>'+
+   '<div class="acts"><button class="sc" onclick="sendWA()">إرسال الكشف واتساب</button></div></div>'+
+   '<div class="tiles">'+acctTile(c.id)+'</div>'+
+   '<div class="acts"><button class="pr ok" onclick="newOp(\'buy\')">+ بيع / شحن</button><button class="sc" onclick="newOp(\'pay\')">💵 استلمت</button><button class="sc" onclick="sendCard()">📷 بطاقة</button></div>'+
+   '<h3>الدفتر</h3>'+ledger(c.id,a,'s')+'<h3>الأرشيف</h3>'+archive(c.id,'s')+'</main>';
+}
+function custTile(cid){
+  var k=tot(cid,'','c'),s=tot(cid,'','s'),d=k!==s;
+  return'<div class="tile o" onclick="U.ctab=\'led\';render()"><small>حسابي — شحن ومشتريات</small><b>'+balTxt(k,0)+'</b><small>حسب سجلي</small><small>حسب البائع: '+balTxt(s,0)+(d?' ⚠':'')+'</small></div>';
+}
+function custView(){
+  var c=cust(me());
+  if(!c){logout();return''}
+  var top='<div class="card"><b>'+esc(c.name)+'</b><small>'+esc(c.phone)+' · أجهزتي: '+(c.devs.map(function(d){return esc(d.name)}).join('، ')||'—')+'</small></div>';
+  if(U.ctab==='led'){
+    var a=U.acct;
+    return'<main>'+top+'<div class="tiles">'+custTile(c.id)+'</div>'+
+     '<div class="acts"><button class="pr ok" onclick="newOp(\'buy\')">+ ما أخذته</button><button class="sc" onclick="newOp(\'pay\')">💵 دفعت</button></div><h3>دفتري</h3>'+ledger(c.id,a,'c')+'</main>';
+  }
+  if(U.ctab==='arc')return'<main>'+top+'<h3>الأرشيف</h3>'+archive(c.id,'c')+'</main>';
+  var need=needC(c.id).filter(function(o){return!o.cardId});
+  return'<main>'+top+'<div class="tiles">'+custTile(c.id)+'</div>'+
+   '<div class="acts"><button class="pr ok" onclick="newOp(\'buy\')">+ ما أخذته</button><button class="sc" onclick="newOp(\'pay\')">💵 دفعت</button></div>'+
+   '<h3>بطاقات واردة</h3>'+cardsCust(c.id)+
+   '<h3>تحتاج تأكيدك <span class="cnt">'+need.length+'</span></h3>'+opList(need,'c',false,'لا شيء بانتظارك ✓')+
+   '<h3>جوالاتي على الشحن</h3>'+phonesList(S.phones.filter(function(p){return p.cid===c.id}),false)+'</main>';
+}
+function notesHTML(){
+  var k=vk(),L=S.notes.filter(function(n){return n.to===k}).slice(0,40);
+  return'<div class="ov" onclick="if(event.target===this)closeNotes()"><div class="sh"><h4>الإشعارات</h4>'+(L.length?L.map(function(n){return'<div class="nt'+(n.read?'':' u')+'">'+esc(n.text)+'<small>'+ago(n.ts)+'</small></div>'}).join(''):'<div class="empty">لا توجد إشعارات</div>')+'<div class="row"><button class="no" onclick="closeNotes()">إغلاق</button></div></div></div>';
+}
+function render(){
+  cleanup();var y=window.pageYOffset||0;
+  if(!S.sess){$('app').innerHTML=loginView();return}
+  $('app').innerHTML=hdr()+(isO()?ownerView():custView())+nav()+(U.sheet?sheetHTML():'')+(U.panel?notesHTML():'');
+  window.scrollTo(0,y);
+}
+S=load();save();render();
+window.addEventListener('online',render);window.addEventListener('offline',render);
+setInterval(function(){if(!U.sheet&&cleanup())render()},20000);
+</script>
+</body>
+</html>
